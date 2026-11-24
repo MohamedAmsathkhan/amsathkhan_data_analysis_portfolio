@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Amsathkhan | Aspiring Data Analyst</title>
+    
+    <!-- Google Fonts: Futuristic & Technical Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons for Technology Badges & Social Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Chart.js for Live Interactive Project Dashboards -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- =================================================================
+         AMBIENT BACKGROUND CANVAS & GLOW EFFECTS
+         ================================================================= -->
+    <!-- Interactive Canvas: Particle & Constellation Cyber Grid -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Radial Ambient Glowing Orbs -->
+    <div class="ambient-glow orb-purple"></div>
+    <div class="ambient-glow orb-blue"></div>
+    <div class="ambient-glow orb-cyan"></div>
+    
+    <!-- Subtle Grid Overlay for Cybernetic Texture -->
+    <div class="cyber-grid-overlay"></div>
+
+    <!-- =================================================================
+         NAVIGATION BAR (ONLY 6 SECTIONS)
+         ================================================================= -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">MOHAMED<span class="logo-dot">.</span>AMSATHKHAN</span>
+                <span class="logo-bracket">]</span>
+            </a>
+
+            <!-- Desktop Navigation Links (6 Sections Only) -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About Me</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link"><i class="fa-solid fa-microchip"></i> Skills</a></li>
+                <li class="nav-item"><a href="#certifications" class="nav-link"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link"><i class="fa-solid fa-chart-diagram"></i> Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <!-- Right Actions: Social links -->
+            <div class="nav-actions">
+                <a href="https://www.linkedin.com/in/amsath2140" target="_blank" rel="noopener noreferrer" class="social-btn-sm" title="LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/MohamedAmsathkhan" target="_blank" rel="noopener noreferrer" class="social-btn-sm" title="GitHub Profile">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =================================================================
+         MAIN CONTENT AREA
+         ================================================================= -->
+    <main>
+
+        <!-- =============================================================
+             1. HOME / HERO SECTION
+             ============================================================= -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    
+                    <!-- Pre-title Futuristic Tag -->
+                    <div class="hero-tag">
+                        <span class="terminal-symbol">&gt;_</span>
+                        <span>ASPIRING DATA ANALYST</span>
+                    </div>
+
+                    <!-- Main Name & Title with Gradient & Shimmer -->
+                    <h1 class="hero-title">
+                        <span class="greeting-prefix">Hello, I'm</span>
+                        <span class="glitch-text glow-text" data-text="MOHAMED AMSATHKHAN">MOHAMED AMSATHKHAN</span>
+                    </h1>
+
+                    <!-- Dynamic Typing Tagline -->
+                    <div class="hero-role-wrapper">
+                        <span class="role-static">Focused on</span>
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+
+                    <!-- Professional Summary -->
+                    <p class="hero-summary">
+                        I am an aspiring Data Analyst with knowledge of Excel, SQL, Python and Power BI. I enjoy analyzing data, finding useful insights and creating dashboards.
+                    </p>
+
+                    <!-- Factual Quick Highlights Strip -->
+                    <div class="hero-metrics-grid">
+                        <div class="metric-card glass-panel">
+                            <span class="metric-number" data-target="8">0</span>
+                            <span class="metric-label">Technical Skills</span>
+                        </div>
+                        <div class="metric-card glass-panel">
+                            <span class="metric-number" data-target="2">0</span>
+                            <span class="metric-label">Hands-on Projects</span>
+                        </div>
+                        <div class="metric-card glass-panel">
+                            <span class="metric-number" data-target="100">0</span><span class="metric-unit">%</span>
+                            <span class="metric-label">Dedicated Learner</span>
+                        </div>
+                        <div class="metric-card glass-panel">
+                            <span class="metric-number" data-target="1">0</span><span class="metric-unit">Goal</span>
+                            <span class="metric-label">Entry Analyst Role</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Call to Action Buttons -->
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn-primary-neon">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>View Projects</span>
+                            <div class="btn-glow-blur"></div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/amsath2140" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/MohamedAmsathkhan" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                        <a href="#contact" class="btn-ghost-outline">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- 3D Holographic Graphic / Data Orb Representation -->
+                <div class="hero-visual">
+                    <div class="hologram-stage">
+                        <div class="hologram-ring ring-1"></div>
+                        <div class="hologram-ring ring-2"></div>
+                        <div class="hologram-ring ring-3"></div>
+                        
+                        <div class="hologram-core glass-panel">
+                            <div class="core-icon">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <div class="core-label">DATA ANALYST</div>
+                            <div class="core-sub">INSIGHTS & DASHBOARDS</div>
+                            
+                            <!-- Floating core tool badges -->
+                            <div class="orbit-badge badge-python"><i class="fa-brands fa-python"></i> Python</div>
+                            <div class="orbit-badge badge-sql"><i class="fa-solid fa-database"></i> SQL</div>
+                            <div class="orbit-badge badge-bi"><i class="fa-solid fa-chart-simple"></i> Power BI</div>
+                            <div class="orbit-badge badge-excel"><i class="fa-solid fa-file-excel"></i> Excel</div>
+                        </div>
+
+                        <!-- Radial Scanning Sweep Light -->
+                        <div class="radar-sweep"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             2. ABOUT ME SECTION
+             ============================================================= -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-user"></i> ABOUT ME</div>
+                    <h2 class="section-title">Getting To Know <span class="gradient-text">Me</span></h2>
+                    <p class="section-subtitle">An aspiring Data Analyst driven by curiosity and clean data insights.</p>
+                </div>
+
+                <div class="about-grid" style="grid-template-columns: 1fr;">
+                    
+                    <!-- Bio & Philosophy Card -->
+                    <div class="about-card glass-panel tilt-card">
+                        <div class="card-corner-decor top-left"></div>
+                        <div class="card-corner-decor bottom-right"></div>
+                        
+                        <div class="bio-header">
+                            <div class="avatar-frame">
+                                <div class="avatar-hologram">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="avatar-status-ring"></div>
+                            </div>
+                            <div class="bio-intro">
+                                <h3>Mohamed Amsathkhan</h3>
+                                <p class="bio-role">Aspiring Data Analyst</p>
+                                <span class="tag-location"><i class="fa-solid fa-briefcase"></i> Open for Full-Time & Entry Data Analyst Roles</span>
+                            </div>
+                        </div>
+
+                        <div class="bio-body">
+                            <p style="font-size: 1.08rem; color: #f1f5f9; line-height: 1.8;">
+                                "I am an aspiring Data Analyst with knowledge of Excel, SQL, Python and Power BI. I enjoy analyzing data, finding useful insights and creating dashboards."
+                            </p>
+                            <p>
+                                I work on hands-on analytics projects by cleaning datasets, querying relational databases, and designing intuitive visual reports. My goal is to help teams understand their numbers and make sound, confident decisions.
+                            </p>
+                        </div>
+
+                        <!-- Core Strengths Highlights -->
+                        <div class="principles-grid">
+                            <div class="principle-item">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                <div>
+                                    <strong>Finding Useful Insights</strong>
+                                    <span>Examining datasets to discover trends, patterns, and answers to business questions.</span>
+                                </div>
+                            </div>
+                            <div class="principle-item">
+                                <i class="fa-solid fa-filter"></i>
+                                <div>
+                                    <strong>Data Cleaning & Transformation</strong>
+                                    <span>Cleaning messy data using SQL, Excel, and Pandas to ensure accurate and dependable analysis.</span>
+                                </div>
+                            </div>
+                            <div class="principle-item">
+                                <i class="fa-solid fa-chart-column"></i>
+                                <div>
+                                    <strong>Interactive Dashboards</strong>
+                                    <span>Building clear and simple visual reports in Power BI and Excel that tell a clear data story.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Buttons Strip Inside About Card -->
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
+                            <a href="https://www.linkedin.com/in/amsath2140" target="_blank" rel="noopener noreferrer" class="btn-primary-neon" style="padding: 0.65rem 1.4rem; font-size: 0.88rem;">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>Connect on LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/MohamedAmsathkhan" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass" style="padding: 0.65rem 1.4rem; font-size: 0.88rem;">
+                                <i class="fa-brands fa-github"></i>
+                                <span>Visit GitHub Profile</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             3. SKILLS SECTION: 8 CORE TECHNICAL SKILLS
+             ============================================================= -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-microchip"></i> TECHNICAL SKILLS</div>
+                    <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                    <p class="section-subtitle">Core tools and libraries I use for analyzing data and building dashboards.</p>
+                </div>
+
+                <!-- 8 Interactive Skill Cards Grid -->
+                <div class="core-skills-grid">
+                    
+                    <!-- 1. MICROSOFT EXCEL -->
+                    <div class="skill-card-3d glass-panel" data-tech="excel">
+                        <div class="glow-backdrop excel-glow"></div>
+                        <div class="card-inner">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-file-excel tech-icon excel-color"></i>
+                                <span class="floating-chip">SPREADSHEET</span>
+                            </div>
+                            <h3 class="skill-title">Microsoft Excel</h3>
+                            <p class="skill-role">Formulas & Pivot Tables</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                Data cleaning, conditional formatting, VLOOKUP/XLOOKUP, and building summary reports with Pivot Tables.
+                            </p>
+                            <div class="proficiency-container">
+                                <div class="proficiency-header">
+                                    <span>Skill Status</span>
+                                    <span class="proficiency-pct" style="color: var(--color-excel);">Core Tool</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill excel-bar" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. SQL -->
+                    <div class="skill-card-3d glass-panel" data-tech="sql">
+                        <div class="glow-backdrop sql-glow"></div>
+                        <div class="card-inner">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-database tech-icon sql-color"></i>
+                                <span class="floating-chip">DATABASE</span>
+                            </div>
+                            <h3 class="skill-title">SQL</h3>
+                            <p class="skill-role">Querying & Data Extraction</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                Writing queries to filter, aggregate, group, and join data from relational database tables.
+                            </p>
+                            <div class="proficiency-container">
+                                <div class="proficiency-header">
+                                    <span>Skill Status</span>
+                                    <span class="proficiency-pct" style="color: var(--color-sql);">Core Tool</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill sql-bar" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. PYTHON -->
+                    <div class="skill-card-3d glass-panel" data-tech="python">
+                        <div class="glow-backdrop python-glow"></div>
+                        <div class="card-inner">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-python tech-icon python-color"></i>
+                                <span class="floating-chip">PROGRAMMING</span>
+                            </div>
+                            <h3 class="skill-title">Python</h3>
+                            <p class="skill-role">Data Analysis Scripts</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                Writing clean scripts to process datasets, inspect information, and automate routine data tasks.
+                            </p>
+                            <div class="proficiency-container">
+                                <div class="proficiency-header">
+                                    <span>Skill Status</span>
+                                    <span class="proficiency-pct" style="color: var(--color-python);">Core Tool</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill python-bar" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. PANDAS -->
+                    <div class="skill-card-3d glass-panel" data-tech="python">
+                        <div class="glow-backdrop python-glow"></div>
+                        <div class="card-inner">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-table tech-icon" style="color: #38bdf8;"></i>
+                                <span class="floating-chip">LIBRARY</span>
+                            </div>
+                            <h3 class="skill-title">Pandas</h3>
+                            <p class="skill-role">Data Wrangling</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                Loading dataframes, handling missing values, filtering rows, and structuring data for analysis.
+                            </p>
+                            <div class="proficiency-container">
+                                <div class="proficiency-header">
+                                    <span>Skill Status</span>
+                                    <span class="proficiency-pct" style="color: #38bdf8;">Core Tool</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill python-bar" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. NUMPY -->
+                    <div class="skill-card-3d glass-panel" data-tech="python">
+                        <div class="glow-backdrop" style="background: #818cf8;"></div>
+                        <div class="card-inner">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-calculator tech-icon" style="color: #818cf8;"></i>
+                                <span class="floating-chip">LIBRARY</span>
+                            </div>
+                            <h3 class="skill-title">NumPy</h3>
+                            <p class="skill-role">Numerical Calculations</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                Managing numerical arrays, computing mathematical operations, and supporting fast data analysis.
+                            </p>
+                            <div class="proficiency-container">
+                                <div class="proficiency-header">
+                                    <span>Skill Status</span>
+                                    <span class="proficiency-pct" style="color: #818cf8;">Core Tool</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill" style="background: linear-gradient(90deg, #4f46e5, #818cf8); width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. POWER BI -->
+                    <div class="skill-card-3d glass-panel" data-tech="powerbi">
+                        <div class="glow-backdrop powerbi-glow"></div>
+                        <div class="card-inner">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-chart-column tech-icon powerbi-color"></i>
+                                <span class="floating-chip">BI TOOL</span>
+                            </div>
+                            <h3 class="skill-title">Power BI</h3>
+                            <p class="skill-role">Interactive Dashboards</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                Designing visual dashboards, connecting data sources, creating charts, and presenting key metrics.
+                            </p>
+                            <div class="proficiency-container">
+                                <div class="proficiency-header">
+                                    <span>Skill Status</span>
+                                    <span class="proficiency-pct" style="color: var(--color-powerbi);">Core Tool</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill powerbi-bar" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. DATA ANALYSIS -->
+                    <div class="skill-card-3d glass-panel" data-tech="analysis">
+                        <div class="glow-backdrop" style="background: #c084fc;"></div>
+                        <div class="card-inner">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-magnifying-glass-chart tech-icon" style="color: #c084fc;"></i>
+                                <span class="floating-chip">ANALYTICS</span>
+                            </div>
+                            <h3 class="skill-title">Data Analysis</h3>
+                            <p class="skill-role">Patterns & Insights</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                Exploring datasets, calculating averages, identifying trends, and answering business questions.
+                            </p>
+                            <div class="proficiency-container">
+                                <div class="proficiency-header">
+                                    <span>Skill Status</span>
+                                    <span class="proficiency-pct" style="color: #c084fc;">Core Tool</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill" style="background: linear-gradient(90deg, #9333ea, #c084fc); width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. DATA VISUALIZATION -->
+                    <div class="skill-card-3d glass-panel" data-tech="visuals">
+                        <div class="glow-backdrop" style="background: #06b6d4;"></div>
+                        <div class="card-inner">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-chart-pie tech-icon" style="color: #06b6d4;"></i>
+                                <span class="floating-chip">VISUALS</span>
+                            </div>
+                            <h3 class="skill-title">Data Visualization</h3>
+                            <p class="skill-role">Clear Visual Reports</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                Creating clean bar charts, line graphs, donut charts, and tables that are simple to interpret.
+                            </p>
+                            <div class="proficiency-container">
+                                <div class="proficiency-header">
+                                    <span>Skill Status</span>
+                                    <span class="proficiency-pct" style="color: #06b6d4;">Core Tool</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill" style="background: linear-gradient(90deg, #0891b2, #06b6d4); width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             4. CERTIFICATIONS & COURSES SECTION
+             ============================================================= -->
+        <section id="certifications" class="section certifications-section">
+            <div class="container">
+                
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-certificate"></i> CREDENTIALS & COURSES</div>
+                    <h2 class="section-title">Certifications & <span class="gradient-text">Courses</span></h2>
+                    <p class="section-subtitle">Verified training and continuous technical learning.</p>
+                </div>
+
+                <div class="cert-grid">
+                    
+                    <!-- 1. DATA ANALYTICS - QSPIDERS (COMPLETED) -->
+                    <div class="cert-card glass-panel tilt-card">
+                        <div class="card-glare"></div>
+                        <div>
+                            <div class="cert-top">
+                                <div class="cert-icon-wrapper">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <span class="badge-status badge-completed">
+                                    <i class="fa-solid fa-circle-check"></i> Completed
+                                </span>
+                            </div>
+                            <h3 class="cert-title">Data Analytics</h3>
+                            <p class="cert-provider">
+                                <i class="fa-solid fa-building-columns"></i> QSpiders
+                            </p>
+                            <p class="cert-desc">
+                                Completed comprehensive training in Data Analytics covering SQL database querying, Python scripting, Excel data modeling, and Power BI dashboard creation.
+                            </p>
+                        </div>
+                        <div class="tech-pill-list" style="margin-bottom: 0;">
+                            <span class="tech-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                            <span class="tech-pill"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="tech-pill"><i class="fa-solid fa-file-excel"></i> Excel</span>
+                            <span class="tech-pill"><i class="fa-solid fa-chart-column"></i> Power BI</span>
+                            <span class="tech-pill"><i class="fa-solid fa-check"></i> Data Analytics</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. AWS EDUCATE - AWS CLOUD LEARNING COURSE (IN PROGRESS) -->
+                    <div class="cert-card glass-panel tilt-card">
+                        <div class="card-glare"></div>
+                        <div>
+                            <div class="cert-top">
+                                <div class="cert-icon-wrapper" style="color: #fbbf24; background: rgba(251, 191, 36, 0.15); border-color: rgba(251, 191, 36, 0.3);">
+                                    <i class="fa-brands fa-aws"></i>
+                                </div>
+                                <span class="badge-status badge-in-progress">
+                                    <span class="pulse-dot-amber"></span> In Progress / Course
+                                </span>
+                            </div>
+                            <h3 class="cert-title">AWS Cloud Learning Course</h3>
+                            <p class="cert-provider">
+                                <i class="fa-brands fa-aws"></i> AWS Educate
+                            </p>
+                            <p class="cert-desc">
+                                Currently learning foundational cloud concepts, cloud computing architecture, and data services through the AWS Educate learning program.
+                            </p>
+                        </div>
+                        <div class="tech-pill-list" style="margin-bottom: 0;">
+                            <span class="tech-pill"><i class="fa-brands fa-aws"></i> AWS Cloud</span>
+                            <span class="tech-pill"><i class="fa-solid fa-cloud"></i> Cloud Concepts</span>
+                            <span class="tech-pill"><i class="fa-solid fa-book-open"></i> Learning Course</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             5. PROJECTS SECTION: 2 HANDS-ON PROJECTS
+             ============================================================= -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-chart-pie"></i> PORTFOLIO PROJECTS</div>
+                    <h2 class="section-title">My Analytical <span class="gradient-text">Projects</span></h2>
+                    <p class="section-subtitle">Real hands-on data projects. Click on any project card to inspect the interactive dashboard.</p>
+                </div>
+
+                <!-- Projects Filter Tabs -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects (2)</button>
+                    <button class="filter-btn" data-filter="python">Python & Pandas</button>
+                    <button class="filter-btn" data-filter="sql">SQL</button>
+                    <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                    <button class="filter-btn" data-filter="excel">Excel</button>
+                </div>
+
+                <!-- 3D Project Cards Grid -->
+                <div class="projects-grid">
+                    
+                    <!-- PROJECT 1: E-Commerce Sales Analysis -->
+                    <article class="project-card tilt-card glass-panel" data-category="python sql" data-project-id="p1">
+                        <div class="card-glare"></div>
+                        <div class="project-header">
+                            <div class="project-type-tag">
+                                <i class="fa-solid fa-bag-shopping"></i> SALES ANALYSIS
+                            </div>
+                            <span class="status-indicator-mini"><span class="pulse-dot"></span> COMPLETED</span>
+                        </div>
+
+                        <div class="project-preview-visual preview-p1">
+                            <div class="mini-chart-mock">
+                                <i class="fa-solid fa-chart-line chart-icon-mock"></i>
+                                <span class="mock-chart-label">SALES & REGIONAL PERFORMANCE</span>
+                            </div>
+                            <div class="scan-line"></div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">E-Commerce Sales Analysis</h3>
+                            <p class="project-description">
+                                Analyzed 1,000 sales records to understand sales, profit, products and regional performance.
+                            </p>
+
+                            <!-- Key Factual Project Highlights -->
+                            <div class="project-kpis">
+                                <div class="kpi-mini">
+                                    <span class="kpi-val">1,000</span>
+                                    <span class="kpi-lbl">Records Analyzed</span>
+                                </div>
+                                <div class="kpi-mini">
+                                    <span class="kpi-val">Sales & Profit</span>
+                                    <span class="kpi-lbl">Key Metrics</span>
+                                </div>
+                                <div class="kpi-mini">
+                                    <span class="kpi-val">Regional</span>
+                                    <span class="kpi-lbl">Performance</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack Pills -->
+                            <div class="tech-pill-list">
+                                <span class="tech-pill"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="tech-pill"><i class="fa-solid fa-table"></i> Pandas</span>
+                                <span class="tech-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+                            <button class="btn-inspect-project" data-target-modal="p1">
+                                <span>Inspect Dashboard & Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: Bank Loan Data Analysis (In Progress) -->
+                    <article class="project-card tilt-card glass-panel" data-category="sql excel powerbi" data-project-id="p2">
+                        <div class="card-glare"></div>
+                        <div class="project-header">
+                            <div class="project-type-tag">
+                                <i class="fa-solid fa-building-columns"></i> FINANCIAL LOAN ANALYSIS
+                            </div>
+                            <span class="status-indicator-mini" style="color: #fbbf24; background: rgba(251, 191, 36, 0.1); border-color: rgba(251, 191, 36, 0.3);">
+                                <span class="pulse-dot-amber"></span> IN PROGRESS
+                            </span>
+                        </div>
+
+                        <div class="project-preview-visual preview-p2">
+                            <div class="mini-chart-mock">
+                                <i class="fa-solid fa-chart-column chart-icon-mock"></i>
+                                <span class="mock-chart-label">LOAN STATUS & APPLICATIONS</span>
+                            </div>
+                            <div class="scan-line"></div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Bank Loan Data Analysis</h3>
+                            <p class="project-description">
+                                Analyzed bank loan data to understand loan applications, funded amounts, loan status and customer information.
+                            </p>
+
+                            <!-- Key Factual Project Highlights -->
+                            <div class="project-kpis">
+                                <div class="kpi-mini">
+                                    <span class="kpi-val">In Progress</span>
+                                    <span class="kpi-lbl">Project Status</span>
+                                </div>
+                                <div class="kpi-mini">
+                                    <span class="kpi-val">Applications</span>
+                                    <span class="kpi-lbl">& Funded Amounts</span>
+                                </div>
+                                <div class="kpi-mini">
+                                    <span class="kpi-val">Status</span>
+                                    <span class="kpi-lbl">& Customer Data</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack Pills -->
+                            <div class="tech-pill-list">
+                                <span class="tech-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                                <span class="tech-pill"><i class="fa-solid fa-file-excel"></i> Excel</span>
+                                <span class="tech-pill"><i class="fa-solid fa-chart-column"></i> Power BI</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+                            <button class="btn-inspect-project" data-target-modal="p2">
+                                <span>Inspect Dashboard & Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             INTERACTIVE PROJECT DETAILS MODAL (WITH LIVE CHART.JS)
+             ============================================================= -->
+        <div class="modal-overlay" id="project-modal" aria-hidden="true">
+            <div class="modal-window glass-panel">
+                <button class="modal-close-btn" id="modal-close-btn" aria-label="Close project modal">&times;</button>
+                
+                <div class="modal-scroll-body">
+                    
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <div class="modal-tag-row">
+                            <span class="badge-tag neon-pill" id="modal-category">PROJECT CATEGORY</span>
+                            <span class="badge-tag live-badge"><i class="fa-solid fa-chart-line"></i> INTERACTIVE DASHBOARD</span>
+                        </div>
+                        <h2 class="modal-title" id="modal-title">Project Title Placeholder</h2>
+                        <p class="modal-summary" id="modal-summary">Simple description of the project analysis.</p>
+                    </div>
+
+                    <!-- Live Interactive Dashboard Section -->
+                    <div class="dashboard-preview-wrapper glass-panel">
+                        <div class="dashboard-header-bar">
+                            <div class="dashboard-title-group">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span>VISUAL DASHBOARD PREVIEW</span>
+                            </div>
+                            <div class="dashboard-controls">
+                                <span class="control-label">View:</span>
+                                <button class="chart-filter-btn active" data-period="view1">Summary</button>
+                                <button class="chart-filter-btn" data-period="view2">By Segment</button>
+                            </div>
+                        </div>
+
+                        <!-- Factual KPI Counters Inside Modal -->
+                        <div class="modal-kpi-bar" id="modal-kpi-bar">
+                            <!-- Populated dynamically by JS -->
+                        </div>
+
+                        <!-- Live Chart.js Canvas Elements -->
+                        <div class="modal-charts-grid">
+                            <div class="chart-box glass-panel">
+                                <div class="chart-box-title">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                    <span id="chart1-label">Performance Chart</span>
+                                </div>
+                                <div class="chart-canvas-wrapper">
+                                    <canvas id="modalChartPrimary"></canvas>
+                                </div>
+                            </div>
+                            <div class="chart-box glass-panel">
+                                <div class="chart-box-title">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <span id="chart2-label">Category Breakdown</span>
+                                </div>
+                                <div class="chart-canvas-wrapper">
+                                    <canvas id="modalChartSecondary"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Project Information Breakdown -->
+                    <div class="modal-details-grid">
+                        
+                        <div class="detail-block glass-panel">
+                            <h4><i class="fa-solid fa-bullseye"></i> Objective</h4>
+                            <p id="modal-problem">Simple explanation of what this project aims to understand.</p>
+                        </div>
+
+                        <div class="detail-block glass-panel">
+                            <h4><i class="fa-solid fa-gears"></i> Tools & Methods</h4>
+                            <p id="modal-methodology">Simple description of how the data was cleaned, queried, and analyzed.</p>
+                        </div>
+
+                        <div class="detail-block glass-panel">
+                            <h4><i class="fa-solid fa-lightbulb"></i> Key Insights</h4>
+                            <p id="modal-outcomes">Simple takeaways learned from analyzing the data.</p>
+                        </div>
+
+                        <div class="detail-block glass-panel">
+                            <h4><i class="fa-solid fa-layer-group"></i> Technologies Used</h4>
+                            <div class="tech-pill-list" id="modal-tech-list">
+                                <!-- Populated dynamically by JS -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- =============================================================
+             6. CONTACT SECTION
+             ============================================================= -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-envelope"></i> GET IN TOUCH</div>
+                    <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                    <p class="section-subtitle">I am actively looking for Data Analyst opportunities. Feel free to reach out to me.</p>
+                </div>
+
+                <div class="contact-grid">
+                    
+                    <!-- Direct Contact Card & Social Links -->
+                    <div class="contact-info-panel glass-panel tilt-card">
+                        <div>
+                            <h3>Mohamed Amsathkhan</h3>
+                            <p class="bio-role" style="margin-bottom: 0.75rem;">Aspiring Data Analyst</p>
+                            <p class="contact-desc">
+                                "I am an aspiring Data Analyst with knowledge of Excel, SQL, Python and Power BI. I enjoy analyzing data, finding useful insights and creating dashboards."
+                            </p>
+
+                            <!-- Social Buttons -->
+                            <div class="contact-methods">
+                                <a href="https://www.linkedin.com/in/amsath2140" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+                                    <div class="method-icon" style="color: #0a66c2; background: rgba(10, 102, 194, 0.15);">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
+                                    <div class="method-details">
+                                        <span class="method-label">LinkedIn Profile</span>
+                                        <span class="method-value">linkedin.com/in/amsath2140</span>
+                                    </div>
+                                    <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.85rem;"></i>
+                                </a>
+
+                                <a href="https://github.com/MohamedAmsathkhan" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+                                    <div class="method-icon" style="color: #fff; background: rgba(255, 255, 255, 0.1);">
+                                        <i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div class="method-details">
+                                        <span class="method-label">GitHub Profile</span>
+                                        <span class="method-value">github.com/MohamedAmsathkhan</span>
+                                    </div>
+                                    <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.85rem;"></i>
+                                </a>
+
+                                <div class="contact-method-item">
+                                    <div class="method-icon" style="color: #4ade80; background: rgba(74, 222, 128, 0.15);">
+                                        <i class="fa-solid fa-briefcase"></i>
+                                    </div>
+                                    <div class="method-details">
+                                        <span class="method-label">Availability</span>
+                                        <span class="method-value">Ready for Entry / Junior Roles</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Direct Social Buttons Row -->
+                        <div class="social-channels">
+                            <span class="social-label">Connect Directly:</span>
+                            <div class="social-icons-row">
+                                <a href="https://www.linkedin.com/in/amsath2140" target="_blank" rel="noopener noreferrer" class="social-btn linkedin-btn" title="LinkedIn Profile">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/MohamedAmsathkhan" target="_blank" rel="noopener noreferrer" class="social-btn github-btn" title="GitHub Profile">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clean Interactive Contact Form -->
+                    <div class="contact-form-panel glass-panel">
+                        <form id="contact-form" class="futuristic-form" novalidate>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Your Name</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-user input-icon"></i>
+                                        <input type="text" id="contact-name" name="name" placeholder="e.g. John Doe" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Your Email</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-envelope input-icon"></i>
+                                        <input type="email" id="contact-email" name="email" placeholder="e.g. john@example.com" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-type">Opportunity Type</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-briefcase input-icon"></i>
+                                    <select id="project-type" name="project_type">
+                                        <option value="job">Data Analyst Job Opportunity</option>
+                                        <option value="internship">Internship Opportunity</option>
+                                        <option value="project">Project / Dashboard Collaboration</option>
+                                        <option value="general">General Inquiries / Networking</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Your Message</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-comment-dots input-icon textarea-icon"></i>
+                                    <textarea id="contact-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-submit-transmission">
+                                <span>SEND MESSAGE</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <div class="btn-glow-pulse"></div>
+                            </button>
+
+                            <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =================================================================
+         FOOTER
+         ================================================================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="#home" class="footer-logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">MOHAMED<span class="logo-dot">.</span>AMSATHKHAN</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <p class="footer-tagline">Aspiring Data Analyst • Excel • SQL • Python • Power BI</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-right">
+                <div style="display: flex; gap: 0.75rem; align-items: center;">
+                    <a href="https://www.linkedin.com/in/amsath2140" target="_blank" rel="noopener noreferrer" class="social-btn-sm" title="LinkedIn Profile">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/MohamedAmsathkhan" target="_blank" rel="noopener noreferrer" class="social-btn-sm" title="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <p>&copy; 2026 Mohamed Amsathkhan. All rights reserved.</p>
+                <button class="btn-back-to-top" id="back-to-top" title="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-notification" class="toast-container" aria-live="assertive"></div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>
